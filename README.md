@@ -43,6 +43,7 @@ npm install
 ## ✅ Desarrollo
 
 ### 3. Implementar Funcionalidades
+![Descripción del GIF](public/funcionamiento.gif)
 
 1. Agrega, edita y elimina tareas en la aplicación.
 2. Asegúrate de que las tareas se guarden en `localStorage`.
