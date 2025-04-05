@@ -38,8 +38,5 @@ jobs:
             libappindicator3-1 \
             xdg-utils
 
-      - name: Generar cobertura
-        run: npm test -- --code-coverage
-
       - name: Ejecutar pruebas
-        run: npm test
+        run: npm test -- --browsers=ChromeHeadless --watch=false

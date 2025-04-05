@@ -11,13 +11,10 @@ module.exports = function (config) {
     ],
     client: {
       jasmine: {},
-      clearContext: false, // leave Jasmine Spec Runner output visible in browser
+      clearContext: false, // Deja visible el resultado de las pruebas en el navegador
     },
     coverageReporter: {
-      dir: require("path").join(
-        __dirname,
-        "./coverage/angular-testing-project"
-      ),
+      dir: require("path").join(__dirname, "./coverage"),
       subdir: ".",
       reporters: [{ type: "html" }, { type: "text-summary" }],
     },
@@ -27,7 +24,7 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ["ChromeHeadless"], // Cambia a ChromeHeadless
-    singleRun: false,
+    singleRun: true, // Asegúrate de que Karma se ejecute una sola vez
     restartOnFileChange: true,
   });
 };
