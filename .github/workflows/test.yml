@@ -27,7 +27,16 @@ jobs:
         run: npm install
 
       - name: Instalar Chrome para pruebas
-        run: sudo apt-get install -y libnss3 libgconf-2-4 libxss1 libasound2 libatk1.0-0 libpangocairo-1.0-0 fonts-liberation libappindicator3-1 xdg-utils
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libnss3 \
+            libxss1 \
+            libatk1.0-0 \
+            libpangocairo-1.0-0 \
+            fonts-liberation \
+            libappindicator3-1 \
+            xdg-utils
 
       - name: Generar cobertura
         run: npm test -- --code-coverage
