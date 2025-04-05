@@ -1,4 +1,4 @@
-name: Ejecutar pruebas en Angular
+name: Ejecutar pruebas y desplegar cobertura
 
 on:
   push:
@@ -28,6 +28,9 @@ jobs:
 
       - name: Instalar Chrome para pruebas
         run: sudo apt-get install -y libnss3 libgconf-2-4 libxss1 libasound2 libatk1.0-0 libpangocairo-1.0-0 fonts-liberation libappindicator3-1 xdg-utils
+
+      - name: Generar cobertura
+        run: npm test -- --code-coverage
 
       - name: Ejecutar pruebas
         run: npm test
