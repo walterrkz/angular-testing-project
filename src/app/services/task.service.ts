@@ -6,11 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class TaskService {
-  private apiUrl = 'https://jsonplaceholder.typicode.com/todos';
 
-  constructor(private http: HttpClient) { }
-
-  getTasks(): Observable<any> {
-    return this.http.get(this.apiUrl);
+  constructor(private http: HttpClient) {
+    console.log('TaskService initialized');
   }
+
 }

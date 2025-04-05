@@ -1,28 +1,32 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TaskListComponent } from './task-list.component';
+import { TaskItemComponent } from '../task-item/task-item.component';
 
-describe('TaskListComponent (Tema: Componentes, Data Binding)', () => {
-  let component: TaskListComponent;
+describe('TaskListComponent', () => {
   let fixture: ComponentFixture<TaskListComponent>;
+  let component: TaskListComponent;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [TaskListComponent]
+      declarations: [TaskListComponent, TaskItemComponent], // Declara ambos componentes
     }).compileComponents();
-  });
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(TaskListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('debería crear el componente', () => {
+  it('debería crear el componente TaskListComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('debería agregar una tarea (Tema: Data Binding)', () => {
-    component.addTask('Nueva Tarea');
-    expect(component.tasks.length).toBe(1, 'Error en Data Binding');
+  it('debería renderizar una lista de tareas usando TaskItemComponent', () => {
+    component.tasks = ['Tarea 1', 'Tarea 2'];
+    fixture.detectChanges();
+
+    const compiled = fixture.nativeElement as HTMLElement;
+    const taskItems = compiled.querySelectorAll('app-task-item');
+    expect(taskItems.length).toBe(2);
   });
+
 });

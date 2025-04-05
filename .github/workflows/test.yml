@@ -12,6 +12,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - name: Install Angular CLI
+        run: npm install -g @angular/cli
+
       - name: Clonar repositorio
         uses: actions/checkout@v3
 

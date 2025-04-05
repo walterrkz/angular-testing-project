@@ -31,6 +31,7 @@ El objetivo de este proyecto es que los estudiantes:
    git clone https://github.com/<tu-usuario>/angular-testing-project.git
    cd angular-testing-project
    ```
+3. Crea un nuevo componente llamado `task-item` dentro de la carpeta `src/app` para que puedas trabajar en la lógica de tu aplicación.
 
 ### 2. Instalar Dependencias
 
@@ -43,7 +44,8 @@ npm install
 ## ✅ Desarrollo
 
 ### 3. Implementar Funcionalidades
-![Descripción del GIF](public/funcionamiento.gif)
+
+![Ejmplo de funcionamiento](public/funcionamiento.gif)
 
 1. Agrega, edita y elimina tareas en la aplicación.
 2. Asegúrate de que las tareas se guarden en `localStorage`.
@@ -121,6 +123,9 @@ npm run deploy
 2. ✅ **Editar Tareas**: Haz clic en "Editar" para modificar una tarea existente.
 3. ✅ **Eliminar Tareas**: Haz clic en "Eliminar" para borrar una tarea.
 4. ✅ **Guardar Tareas**: Las tareas se guardan en `localStorage` para persistencia.
+5. ✅ **Pruebas Unitarias**: Asegúrate de que todas las pruebas unitarias pasen.
+6. ✅ **Cobertura de Código**: Genera un reporte de cobertura y asegúrate de que sea del 100%.
+7. ✅ **Guardar Screnshots de tu trabajo**: Una vez que tengas la evidencia de que tu proyecto funciona, toma capturas de pantalla de tu trabajo y súbelas en la carpeta screenshots de tu proyecto.
 
 ### Evaluación
 
@@ -132,13 +137,9 @@ Este proyecto evalúa los siguientes conceptos:
    - Event Binding
    - Two-way Binding
 2. **Directivas**:
-   - Uso de directivas estructurales (`*ngFor`, `*ngIf`) y de atributos (`[ngClass]`, `[ngStyle]`).
-3. **Servicios**:
-   - Creación y uso de servicios para manejar datos.
-4. **Ruteo**:
-   - Configuración de rutas y navegación programática.
-5. **Despliegue**:
-   - Publicación del proyecto en GitHub Pages.
+   - Uso de directivas estructurales (`*@For`, `*@If`) y de atributos (`[ngClass]`, `[ngStyle]`).
+3. **Input & Output**:
+   - Uso de `@Input()` y `@Output()` para la comunicación entre componentes.
 
 ---
 

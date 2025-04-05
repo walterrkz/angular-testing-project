@@ -6,9 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./task-list.component.css']
 })
 export class TaskListComponent {
+
   tasks: string[] = [];
 
+  constructor() {
+    console.log('TaskListComponent initialized');
+  }
+
   addTask(task: string) {
-    this.tasks.push(task);
+    console.log('Adding task:', task);
+  }
+
+  updateTask(task: string) {
+    console.log('Updating task:', task);
+  }
+
+  deleteTask(task: string) {
+    console.log('Deleting task:', task);
   }
 }
