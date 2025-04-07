@@ -8,7 +8,9 @@ describe('TaskListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [TaskListComponent, TaskItemComponent], // Declara ambos componentes
+      declarations: [TaskListComponent],
+      imports:[TaskItemComponent]
+      // Declara ambos componentes
     }).compileComponents();
 
     fixture = TestBed.createComponent(TaskListComponent);
