@@ -104,14 +104,20 @@ Puedes ver los resultados en la pestaña _Actions_ de tu repositorio.
 ```bash
 ng add angular-cli-ghpages
 ```
+2. modificar la siguiente linea en package.json para que contenga el nombre de tu repositorio
 
-2. Compila y despliega el proyecto:
+```code
+   "deploy": "ng deploy --base-href=/<nombre-del-repositorio>/"
+```
+
+
+3. Compila y despliega el proyecto:
 
 ```bash
 npm run deploy
 ```
 
-3. Accede a tu aplicación publicada:
+4. Accede a tu aplicación publicada:
    `https://<tu-usuario>.github.io/angular-testing-project/
 `
 
