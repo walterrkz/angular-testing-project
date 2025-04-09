@@ -1,1 +1,8 @@
-<p>task-list works!</p>
+<app-task-item [tasks]="tasks" (taskDeleted)="deleteTask($event)" (taskEdited)="updateTaskActive($event)"></app-task-item>
+<br>
+<br>
+<input type="text" #addbtn>
+<button (click)="addTask(addbtn.value)">Agregar</button>
+<br>
+<input type="text" #editbtn [disabled]="toggleBtn">
+<button [disabled]="toggleBtn" (click)="updateTask(editbtn.value)">Actualizar</button>
